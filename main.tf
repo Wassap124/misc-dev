@@ -14,4 +14,5 @@ resource "null_resource" "null" {}
 
 output default_region {
 	value = var.aws_default_region
+	sensitive   = true
 }
