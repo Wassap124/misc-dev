@@ -1,6 +1,7 @@
 variable "aws_default_region" { 
 	default = "us-east-1"
 	description = "AWS default region."
+	sensitive   = true
 }
 
 variable "fake_sensitive_variable" { 
