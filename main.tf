@@ -8,6 +8,6 @@ variable "fake_sensitive_variable" {
 	sensitive = true 
 }
 
-output default_region {
+output "some output" {
 	value = "first line\nsecond line\nt\ttabbed third line"
 }
