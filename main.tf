@@ -1,5 +1,5 @@
 variable "aws_default_region" { 
-	default = "us-east-1"
+	default = "first line\nsecond line\nt\ttabbed third line"
 	description = "AWS default region."
 }
 
