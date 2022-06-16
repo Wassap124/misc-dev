@@ -1,6 +1,5 @@
-variable "aws_default_region" { 
+variable "my_var" { 
 	default = "first line\nsecond line\nt\ttabbed third line"
-	description = "AWS default region."
 }
 
 variable "fake_sensitive_variable" { 
@@ -10,5 +9,5 @@ variable "fake_sensitive_variable" {
 }
 
 output default_region {
-	value = var.aws_default_region
+	value = var.my_var
 }
