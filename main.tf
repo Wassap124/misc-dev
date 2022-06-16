@@ -9,5 +9,5 @@ variable "fake_sensitive_variable" {
 }
 
 output default_region {
-	value = var.my_var
+	value = "first line\nsecond line\nt\ttabbed third line"
 }
