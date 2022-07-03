@@ -1,6 +1,15 @@
 /* empty file - Terragrunt will generate all resources */
 
-resource "aws_instance" "web" {
-  ami           = "ami-a1b2c3d4"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+
+resource "aws_s3_bucket_acl" "example" {
+  bucket = aws_s3_bucket.b.id
+  acl    = "private"
 }
