@@ -9,7 +9,7 @@ variable "fake_sensitive_variable" {
 	sensitive = true 
 }
 
-resource "null_resource" "null" {
+resource "null_resource" "null1" {
 }
 
 terraform {
