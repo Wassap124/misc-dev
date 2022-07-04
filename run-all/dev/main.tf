@@ -1,7 +1,7 @@
 /* empty file - Terragrunt will generate all resources */
 
-resource "aws_s3_bucket" "alon_bucket_04_07_22" {
-  bucket = "my-tf-test-bucket"
+resource "aws_s3_bucket" "alon_test_bucket" {
+  bucket = "alon_test_bucket"
 
   tags = {
     Name        = "My bucket"
@@ -10,6 +10,6 @@ resource "aws_s3_bucket" "alon_bucket_04_07_22" {
 }
 
 resource "aws_s3_bucket_acl" "example11" {
-  bucket = aws_s3_bucket.alon_bucket_04_07_22.id
+  bucket = aws_s3_bucket.alon_test_bucket.id
   acl    = "private"
 }
