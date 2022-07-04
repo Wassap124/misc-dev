@@ -10,6 +10,6 @@ resource "aws_s3_bucket" "alon_bucket_test" {
 }
 
 resource "aws_s3_bucket_acl" "example11" {
-  bucket = aws_s3_bucket.b.id
+  bucket = aws_s3_bucket.alon_bucket_test.id
   acl    = "private"
 }
