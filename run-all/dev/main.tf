@@ -1,6 +1,6 @@
 /* empty file - Terragrunt will generate all resources */
 
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "alon_bucket_test" {
   bucket = "my-tf-test-bucket"
 
   tags = {
