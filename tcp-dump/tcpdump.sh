@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apk add --upgrade tcpdump
+tcpdump
