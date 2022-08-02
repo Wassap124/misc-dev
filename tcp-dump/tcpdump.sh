@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yum install tcpdump && tcpdump
+apk add --upgrade tcpdump
