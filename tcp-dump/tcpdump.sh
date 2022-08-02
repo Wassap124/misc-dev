@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt update && apt install tcpdump && tcpdump
+yum install tcpdump && tcpdump
