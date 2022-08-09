@@ -1,4 +1,4 @@
 module "my-module" {
-  source = "api-pr8860.dev.env0.com/08678d94-d6c0-4dc9-a759-afde75c45440/my-module/alon"
+  source = "api-pr8870.dev.env0.com/7e0f9e56-b199-44da-ba70-08987691ba81/test/testprovider"
   version = "0.0.2"
 }
