@@ -1,0 +1,9 @@
+environments:
+  null-resource:
+    name: 'null resource'
+    templateName: 'Null Resource'
+  outputs:
+    name: outputs
+    templateName: 'Outputs'
+    needs:
+      - null-resource
