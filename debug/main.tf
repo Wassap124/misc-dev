@@ -3,7 +3,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "alon-inc"
     workspaces {
-      prefix = "deubg-"
+      prefix = "no-trusts-given-bootstrap-"
     }
   }
 }
