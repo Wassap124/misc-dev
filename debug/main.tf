@@ -1,28 +1,27 @@
-terraform {
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "alon-inc"
-    workspaces {
-      name = "misc-dev"
-    }
-  }
-}
+# terraform {
+#   backend "remote" {
+#     hostname     = "app.terraform.io"
+#     organization = "alon-inc"
+#     workspaces {
+#       prefix = "misc-"
+#     }
+#   }
+# }
 
 output "workspace_name" {
   value = terraform.workspace
 }
 
-# comment
-# terraform {
-#   backend "remote" {
-#     hostname = "backend-pr10487.api.dev.env0.com"
-#     organization = "13b74860-fd60-402e-95c4-1febbf0cc954.d58460a8-9feb-4ea3-b2ca-84be62db6c75"
+terraform {
+  backend "remote" {
+    hostname = "backend-pr10487.api.dev.env0.com"
+    organization = "13b74860-fd60-402e-95c4-1febbf0cc954.d58460a8-9feb-4ea3-b2ca-84be62db6c75"
 
-#     workspaces {
-#       name = "this-is-remote-backend-workspace-name"
-#     }
-#   }
-# }
+    workspaces {
+      name = "this-is-a-workspace-name"
+    }
+  }
+}
 
 # terraform {
 #   required_version = "~>1.3.1"
