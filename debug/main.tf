@@ -12,7 +12,6 @@ output "workspace_name" {
   value = terraform.workspace
 }
 
-# new comment
 # terraform {
 #   backend "remote" {
 #     hostname = "backend-pr10487.api.dev.env0.com"
