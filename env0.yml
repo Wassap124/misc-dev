@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+  steps:
+    terraformPlan:
+      before:
+        - 'echo TF_WORKSPACE="workspace-name-from-yml" >> $ENV0_ENV'
