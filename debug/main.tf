@@ -13,7 +13,7 @@ output "workspace_name" {
 }
 
 terraform {
-  required_version  = "~> 1.0.0, <1.1.0"
+  required_version  = "~> 1.1.0, <1.2.0"
   backend "remote" {
     hostname = "backend-pr10487.api.dev.env0.com"
     organization = "13b74860-fd60-402e-95c4-1febbf0cc954.d58460a8-9feb-4ea3-b2ca-84be62db6c75"
