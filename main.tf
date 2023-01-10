@@ -9,7 +9,7 @@ variable "fake_sensitive_variable" {
 	sensitive = true 
 }
 
-output "fake_ssh" {
+output "fake_ssh1" {
 	value = <<-EOT
 	-----BEGIN RSA PRIVATE KEY-----
 	MIICXAIBAAKBgQCsTNtPzYFzn/DcBi8mtcypKVq7G0ZTpyE8GP4wKKG+9bbCSoff
