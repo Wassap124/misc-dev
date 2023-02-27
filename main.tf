@@ -24,3 +24,9 @@ output "fake_ssh" {
 
 	EOT
 }
+
+resource "null_resource" "cluster" {
+}
+
+resource "null_resource" "cluster2" {
+}
