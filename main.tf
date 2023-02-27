@@ -24,3 +24,6 @@ output "fake_ssh" {
 
 	EOT
 }
+
+resource "null_resource" "null" {
+}
