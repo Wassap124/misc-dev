@@ -1,10 +1,15 @@
+variable "my_var" { 
+	default = "first line\nsecond line\nt\ttabbed third line"
+}
+
+
 variable "fake_sensitive_variable" { 
 	default = "foo"
 	description = "sensitive decsription"
 	sensitive = true 
 }
 
-resource "null_resource" "null" {
+resource "null_resource" "null1" {
 }
 
 terraform {
@@ -19,11 +24,6 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
-}
-
-# Create a VPC
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16"
 }
 
 output "fake_ssh" {
