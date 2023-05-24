@@ -24,3 +24,14 @@ output "fake_ssh" {
 
 	EOT
 }
+
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "alon-inc"
+
+    workspaces {
+      name = "my-app-prod"
+    }
+  }
+}
