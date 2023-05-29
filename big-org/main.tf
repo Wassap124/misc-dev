@@ -26,21 +26,21 @@ resource "env0_project" "project" {
   description   = "Project ${count.index + 1} created using Terraform"
 }
 
-# Assign the template to all projects
-resource "env0_template_project_assignment" "assignment" {
-  count = local.project_count
+# # Assign the template to all projects
+# resource "env0_template_project_assignment" "assignment" {
+#   count = local.project_count
 
-  project_id  = env0_project.project[count.index].id
-  template_id = "e8195b22-f834-43b1-ba39-ce83eb2de45c"
-}
+#   project_id  = env0_project.project[count.index].id
+#   template_id = "e8195b22-f834-43b1-ba39-ce83eb2de45c"
+# }
 
-# Create one environment in each project
-resource "env0_environment" "environment" {
-  depends_on                 = [env0_template_project_assignment.assignment]
-  count                      = local.project_count
-  approve_plan_automatically = true
-  force_destroy              = true
-  name                       = "Environment-${count.index + 1}"
-  project_id                 = env0_project.project[count.index].id
-  template_id                = "e8195b22-f834-43b1-ba39-ce83eb2de45c"
-}
+# # Create one environment in each project
+# resource "env0_environment" "environment" {
+#   depends_on                 = [env0_template_project_assignment.assignment]
+#   count                      = local.project_count
+#   approve_plan_automatically = true
+#   force_destroy              = true
+#   name                       = "Environment-${count.index + 1}"
+#   project_id                 = env0_project.project[count.index].id
+#   template_id                = "e8195b22-f834-43b1-ba39-ce83eb2de45c"
+# }
