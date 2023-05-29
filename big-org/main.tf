@@ -29,9 +29,9 @@ resource "env0_project" "project" {
 # Create a single template
 resource "env0_template" "template" {
   name                   = "null_resource_1"
-  repository             = "https://github.com/orr-levinger/env-templates-fork"
-  path                   = "misc/null-resource"
-  github_installation_id = 31621691
+  repository             = "https://github.com/Wassap124/misc-dev/"
+  path                   = "."
+  github_installation_id = 25575865
 }
 
 # Assign the template to all projects
