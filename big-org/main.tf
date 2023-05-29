@@ -26,20 +26,12 @@ resource "env0_project" "project" {
   description   = "Project ${count.index + 1} created using Terraform"
 }
 
-# Create a single template
-resource "env0_template" "template" {
-  name                   = "null_resource_1"
-  repository             = "https://github.com/Wassap124/misc-dev/"
-  path                   = "."
-  github_installation_id = 25575865
-}
-
 # Assign the template to all projects
 resource "env0_template_project_assignment" "assignment" {
   count = local.project_count
 
   project_id  = env0_project.project[count.index].id
-  template_id = env0_template.template.id
+  template_id = "e8195b22-f834-43b1-ba39-ce83eb2de45c"
 }
 
 # Create one environment in each project
@@ -50,5 +42,5 @@ resource "env0_environment" "environment" {
   force_destroy              = true
   name                       = "Environment-${count.index + 1}"
   project_id                 = env0_project.project[count.index].id
-  template_id                = env0_template.template.id
+  template_id                = "e8195b22-f834-43b1-ba39-ce83eb2de45c"
 }
