@@ -8,10 +8,10 @@ terraform {
 
 # Configure the env0 provider
 provider "env0" {
-  api_key         = "v4xtbztra5tlcvak"
-  api_secret      = "iLE9HdBEXzntIVv-OYWZjAuDIY4ZaBUo"
-  organization_id = "28caf8f9-92f6-4731-a6ce-f010da5a78eb"
-  api_endpoint    = "https://api-pr12135.dev.env0.com"
+  api_key         = "bwolsmdfmseezwfe"
+  api_secret      = "vvc_UruoL5Bgd6QKIHSaC3eoXxNuyVfo"
+  organization_id = "27314f98-e0c3-4347-9b1c-3d18827320ef"
+  api_endpoint    = "https://api-pr12168.dev.env0.com"
 }
 
 locals {
