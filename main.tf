@@ -26,7 +26,12 @@ output "fake_ssh" {
 }
 
 resource "null_resource" "resource1" {
+
 }
 
 resource "null_resource" "resource2" {
+}
+
+module "some_custom_module" {
+  source = "./module_resource"
 }
