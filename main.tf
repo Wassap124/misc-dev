@@ -32,6 +32,6 @@ resource "null_resource" "resource1" {
 resource "null_resource" "resource2" {
 }
 
-module "website_s3_bucket" {
+module "local_module" {
   source = "./module"
 }
