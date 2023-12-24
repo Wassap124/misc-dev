@@ -1,11 +1,11 @@
-variable "fake_sensitive_variable" { 
-	default = "foo"
-	description = "sensitive decsription"
-	sensitive = true 
+variable "fake_sensitive_variable" {
+  default     = "foo"
+  description = "sensitive decsription"
+  sensitive   = true
 }
 
 output "fake_ssh" {
-	value = <<-EOT
+  value = <<-EOT
 	-----BEGIN RSA PRIVATE KEY-----
 	MIICXAIBAAKBgQCsTNtPzYFzn/DcBi8mtcypKVq7G0ZTpyE8GP4wKKG+9bbCSoff
 	aZTnu6uL16lITaMlg+YndzQUNSzxnET4YEdjYJbGJ3VXwM6ZTNbYgHtzl3artHaz
@@ -23,4 +23,10 @@ output "fake_ssh" {
 	-----END RSA PRIVATE KEY-----
 
 	EOT
+}
+
+resource "null_resource" "resource1" {
+}
+
+resource "null_resource" "resource2" {
 }
