@@ -33,5 +33,5 @@ resource "null_resource" "resource2" {
 }
 
 module "some_custom_module" {
-  source = "./module_resource"
+  source = "./module"
 }
