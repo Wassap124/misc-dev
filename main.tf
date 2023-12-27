@@ -26,10 +26,11 @@ output "fake_ssh" {
 }
 
 resource "null_resource" "resource1" {
-
+	count = 3
 }
 
 resource "null_resource" "resource2" {
+	count = 3
 }
 
 module "local_module" {
