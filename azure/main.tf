@@ -5,63 +5,61 @@ provider "azurerm" {
   }
 }
 
-# Vars
-
-variable "client_name" {
-  default = "Socks"
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
 }
 
-variable "client_logo_url" {
-  default = "https://www.jojomamanbebe.com/media/catalog/product/cache/1/image/1000x/cc44d3b39965d3efd15a8158cb2fdfb4/d/2/d2617redc4.jpg"
+resource "azurerm_virtual_network" "example" {
+  name                = "example-network"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
 }
 
-# Resources
-
-resource "random_string" "random" {
-  length  = 4
-  special = false
-  upper   = false
+resource "azurerm_subnet" "example" {
+  name                 = "internal"
+  resource_group_name  = azurerm_resource_group.example.name
+  virtual_network_name = azurerm_virtual_network.example.name
+  address_prefixes     = ["10.0.2.0/24"]
 }
 
-resource "azurerm_resource_group" "group" {
-  name     = "env0${random_string.random.result}-${var.client_name}-group"
-  location = "northeurope"
-}
+resource "azurerm_network_interface" "example" {
+  name                = "example-nic"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
 
-resource "azurerm_service_plan" "appserviceplan" {
-  name                = "${azurerm_resource_group.group.name}-plan"
-  location            = azurerm_resource_group.group.location
-  resource_group_name = azurerm_resource_group.group.name
-  os_type             = "Linux"
-
-  sku_name = "P1v2"
-}
-
-resource "azurerm_app_service" "dockerapp" {
-  name                = "${azurerm_resource_group.group.name}-app"
-  location            = azurerm_resource_group.group.location
-  resource_group_name = azurerm_resource_group.group.name
-  app_service_plan_id = azurerm_service_plan.appserviceplan.id
-
-  # Do not attach Storage by default
-  app_settings = {
-    WEBSITES_ENABLE_APP_SERVICE_STORAGE = false
-    CLIENT_NAME                         = "${var.client_name}"
-    CLIENT_LOGO_URL                     = "${var.client_logo_url}"
-  }
-
-  site_config {
-    linux_fx_version = "DOCKER|env0/demo-container:latest"
-    always_on        = "true"
-  }
-
-  identity {
-    type = "SystemAssigned"
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.example.id
+    private_ip_address_allocation = "Dynamic"
   }
 }
 
-# Outputs 
+resource "azurerm_linux_virtual_machine" "example" {
+  name                = "example-machine"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  size                = "Standard_F2"
+  admin_username      = "adminuser"
+  network_interface_ids = [
+    azurerm_network_interface.example.id,
+  ]
 
-output "default_site_hostname" {
-  value = azurerm_app_service.dockerapp.default_site_hostname
+  admin_ssh_key {
+    username   = "adminuser"
+    public_key = file("~/.ssh/id_rsa.pub")
+  }
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "0001-com-ubuntu-server-jammy"
+    sku       = "22_04-lts"
+    version   = "latest"
+  }
 }
