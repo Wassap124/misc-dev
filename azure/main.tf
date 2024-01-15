@@ -55,6 +55,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   ]
 
   admin_password = "Password1234!"
+  disable_password_authentication = false
 
   os_disk {
     caching              = "ReadWrite"
