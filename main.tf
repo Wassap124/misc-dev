@@ -26,7 +26,7 @@ output "fake_ssh" {
 }
 
 resource "null_resource" "resource1" {
-	count = 2
+	count = 4
 }
 
 resource "null_resource" "resource2" {
