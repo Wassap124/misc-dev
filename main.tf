@@ -29,7 +29,7 @@ resource "null_resource" "resource1" {
 	count = 2
 }
 
-resource "null_resource" "resource2" {
+resource "null_resource" "big boi" {
 }
 
 module "local_module" {
