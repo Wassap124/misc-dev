@@ -5,5 +5,5 @@ deploy:
     terraformInit:
       before:
         - ls -al
-        - chown ugo+rwx ./my.sh
+        - chown 777 ./my.sh
         - ./my.sh
