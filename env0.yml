@@ -4,5 +4,7 @@ deploy:
   steps:
     terraformInit:
       before:
+        - echo $ENV0_ROOT_DIR
+        - ls -al $ENV0_ROOT_DIR
         - chmod 777 ../my.sh
         - ../my.sh
