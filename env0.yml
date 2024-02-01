@@ -7,5 +7,5 @@ deploy:
         - pwd
         - ls -al
         - ls -al ../
-        - chmod 777 ./my.sh
-        - ./my.sh
+        - chmod 777 ../my.sh
+        - ../my.sh
