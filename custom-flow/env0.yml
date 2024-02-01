@@ -5,5 +5,5 @@ deploy:
     terraformInit:
       before:
         - ls -al
-        - chown 777 ./my.sh
+        - chmod 777 ./my.sh
         - ./my.sh
