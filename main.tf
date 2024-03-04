@@ -13,5 +13,5 @@ provider "aws" {
 
 
 resource "null_resource" "resource2" {
-  count = 10000
+  count = 1000
 }
