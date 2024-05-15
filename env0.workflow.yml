@@ -1,0 +1,14 @@
+environments
+  vpc:
+    name: 'VPC and Network'
+    templateName: 'null resource'
+  db:
+    name: DB
+    templateName: 'null resource'
+    needs:
+      - vpc
+  eks:
+    name: EKS
+    templateName: 'null resource'
+    needs:
+      - vpc
