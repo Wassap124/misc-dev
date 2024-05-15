@@ -13,3 +13,7 @@ provider "aws" {
 
 resource "null_resource" "example" {
 }
+
+output "null_resource_id" {
+  value = null_resource.example.id
+}
