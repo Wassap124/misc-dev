@@ -1,4 +1,4 @@
-environments
+environments:
   vpc:
     name: 'VPC and Network'
     templateName: 'null resource'
