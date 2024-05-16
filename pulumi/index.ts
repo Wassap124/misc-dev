@@ -2,7 +2,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 class MyNullResource extends pulumi.Resource {
     constructor(name: string) {
-        super("custom:null:MyNullResource", name, true);
+        super("asdasd:null:MyNullResource", name, true);
     }
 }
 
