@@ -1,13 +1,10 @@
 import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
 
-class MyNullResource extends pulumi.Resource {
-    constructor(name: string) {
-        super("asdasd:null:MyNullResource", name, true);
-    }
-}
+// Create an AWS resource (S3 Bucket)
+const bucket = new aws.s3.Bucket("my-bucket");
 
-// Create an instance of MyNullResource
-const myNullResource = new MyNullResource("myNullResource");
+// Export the name of the bucket
+export const bucketName = bucket.id;
 
-// Output the ID of the null resource
-export const nullResourceId = myNullResource.urn;
