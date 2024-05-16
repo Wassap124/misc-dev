@@ -3,4 +3,7 @@ deploy:
     setupVariables:
       after:
         - npm i
+        
+    preview:
+      before:
         - pulumi config set aws:region us-east-1
