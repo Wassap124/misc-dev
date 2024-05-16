@@ -1,8 +1,8 @@
 import * as pulumi from "@pulumi/pulumi";
 
-class MyNullResource extends pulumi.CustomResource {
+class MyNullResource extends pulumi.Resource {
     constructor(name: string) {
-        super("custom:null:MyNullResource", name, {});
+        super("custom:null:MyNullResource", name, true);
     }
 }
 
@@ -10,4 +10,4 @@ class MyNullResource extends pulumi.CustomResource {
 const myNullResource = new MyNullResource("myNullResource");
 
 // Output the ID of the null resource
-export const nullResourceId = myNullResource.id;
+export const nullResourceId = myNullResource.urn;
