@@ -4,6 +4,6 @@ deploy:
       after:
         - npm i
         
-    preview:
+    pulumiPreview:
       before:
         - pulumi config set aws:region us-east-1
