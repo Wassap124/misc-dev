@@ -1,14 +1,7 @@
 environments:
-  vpc:
-    name: 'VPC and Network'
-    templateName: 'null resource'
-  db:
-    name: DB
-    templateName: 'null resource'
-    needs:
-      - vpc
-  eks:
-    name: EKS
-    templateName: 'null resource'
-    needs:
-      - vpc
+  helm1:
+    name: '1st helm sub-env'
+    templateName: 'helm'
+  helm2:
+    name: '2nd helm sub-env'
+    templateName: 'helm'
