@@ -6,4 +6,4 @@ environments:
   helm2:
     name: '2nd helm sub-env'
     templateName: 'helm'
-    workspace: 'release-name'
+    workspace: 'release-name2'
