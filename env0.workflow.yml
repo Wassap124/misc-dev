@@ -1,9 +1,9 @@
 environments:
   helm1:
-    name: '1st helm sub-env'
-    templateName: 'helm'
-    workspace: 'release-name'
+    name: "1st helm sub-env"
+    templateName: "helm"
+    workspace: "release-name"
   helm2:
-    name: '2nd helm sub-env'
-    templateName: 'helm'
-    workspace: 'release-name2'
+    name: "2nd helm sub-env"
+    templateName: "helm"
+    workspace: "release-name"
