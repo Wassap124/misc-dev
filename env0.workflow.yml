@@ -6,4 +6,4 @@ environments:
       terraformVersion: '1.5.7'
       repository: 'https://github.com/Wassap124/misc-dev/'
       path: '.'
-      githubInstallationId: 28294973
+      githubInstallationId: 25575865
