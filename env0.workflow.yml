@@ -1,5 +1,6 @@
 environments:
   tf-null:
+    name: 'null resource vcs'
     vcs: 
       type: 'terraform'
       terraformVersion: '1.5.7'
