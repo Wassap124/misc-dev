@@ -1,9 +1,7 @@
 environments:
-  helm1:
-    name: "1st helm sub-env"
-    templateName: "helm"
-    workspace: "release-name"
-  helm2:
-    name: "2nd helm sub-env"
-    templateName: "helm"
-    workspace: "release-name"
+  tf-null:
+    type: 'terraform'
+    terraformVersion: '1.5.7'
+    repository: 'https://github.com/Wassap124/misc-dev/'
+    path: '.'
+    githubInstallationId: 28294973
