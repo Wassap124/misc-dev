@@ -1,7 +1,8 @@
 environments:
   tf-null:
-    type: 'terraform'
-    terraformVersion: '1.5.7'
-    repository: 'https://github.com/Wassap124/misc-dev/'
-    path: '.'
-    githubInstallationId: 28294973
+    vcs: 
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/Wassap124/misc-dev/'
+      path: '.'
+      githubInstallationId: 28294973
