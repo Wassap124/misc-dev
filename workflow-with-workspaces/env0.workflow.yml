@@ -6,7 +6,7 @@ environments:
   tf-null3:
     name: "null resource vcs 3"
     templateName: "null resources"
-    workspace: "null-resources-workspace-3"
+    workspace: "i-am-null"
     needs:
       - tf-null
 settings:
