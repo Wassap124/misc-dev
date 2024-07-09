@@ -3,3 +3,5 @@ environments:
     name: 'null resource vcs'
     templateName: 'null resources'
     workspace: 'null-resources-workspace'
+settings:
+  environmentRemovalStrategy: destroy
