@@ -2,6 +2,10 @@ environments:
   tf-null:
     name: "null resource vcs"
     templateName: "null resources"
+    workspace: "null-resources-workspace-1"
+  tf-null3:
+    name: "null resource vcs 3"
+    templateName: "null resources"
     workspace: "null-resources-workspace-3"
     needs:
       - tf-null
