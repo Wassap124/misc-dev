@@ -3,12 +3,6 @@ environments:
     name: "null resource vcs"
     templateName: "null resources"
     workspace: "null-resources-workspace-1"
-  tf-null2:
-    name: "null resource vcs 2 "
-    templateName: "null resources"
-    workspace: "null-resources-workspace-2"
-    needs:
-      - tf-null3
   tf-null3:
     name: "null resource vcs 3"
     templateName: "null resources"
