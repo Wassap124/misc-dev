@@ -8,12 +8,12 @@ environments:
     templateName: "null resources"
     workspace: "null-resources-workspace-2"
     needs:
-      - tf-null
+      - tf-null3
   tf-null3:
     name: "null resource vcs 3"
     templateName: "null resources"
     workspace: "null-resources-workspace-3"
     needs:
-      - tf-null2
+      - tf-null
 settings:
   environmentRemovalStrategy: destroy
