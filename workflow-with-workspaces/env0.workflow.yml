@@ -3,10 +3,6 @@ environments:
     name: 'null resource vcs'
     templateName: 'null resources'
     workspace: 'null-resources-workspace'
-  tf-null2:
-    name: 'other null resource vcs'
-    templateName: 'null resources'
-    workspace: 'different-resources-workspace'
 
 settings:
   environmentRemovalStrategy: destroy
