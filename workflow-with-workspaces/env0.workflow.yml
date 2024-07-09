@@ -1,0 +1,5 @@
+environments:
+  tf-null:
+    name: 'null resource vcs'
+    templateName: 'null resources'
+    workspace: 'null-resources-workspace'
