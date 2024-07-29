@@ -1,0 +1,9 @@
+roles:
+  - name: geerlingguy.nginx
+  - name: community.general
+    src: git+https://github.com/ansible-collections/community.general.git
+    version: 3.2.0
+
+collections:
+  - name: ansible.posix
+  - name: community.general
