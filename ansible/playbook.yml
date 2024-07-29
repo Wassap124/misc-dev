@@ -3,3 +3,8 @@
     - name: Print the variable
       debug:
         msg: "{{ my_extra_var }}"
+      tags:
+        - should-run
+    - name: Print the variable
+      debug:
+        msg: "{{ my_extra_var }}"
