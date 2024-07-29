@@ -1,0 +1,9 @@
+- hosts: ubuntu
+  tasks:
+    - name: Update and upgrade apt packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+    - name: Print the variable
+      debug:
+        msg: "{{ my_extra_var }}"
