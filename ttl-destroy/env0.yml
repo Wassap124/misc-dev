@@ -4,4 +4,4 @@ deploy:
   steps:
     opentofuPlan:
       before:
-        - gasjdskl
+        - echo "hello"
