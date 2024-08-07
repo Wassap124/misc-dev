@@ -2,13 +2,13 @@ environments:
   tf-null1:
     name: "null resource vcs"
     templateName: "null resources"
+    workspace: "null-resources-workspace-1"
   tf-null2:
     name: "null resource vcs 2"
     templateName: "null resources"
+    workspace: "i-am-null"
     needs:
       - tf-null1
 
 settings:
   environmentRemovalStrategy: destroy
-
-
