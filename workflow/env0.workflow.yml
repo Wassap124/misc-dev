@@ -1,0 +1,14 @@
+environments:
+  tf-null1:
+    name: "null resource vcs"
+    templateName: "null resources"
+  tf-null2:
+    name: "null resource vcs 2"
+    templateName: "null resources"
+    needs:
+      - tf-null1
+
+settings:
+  environmentRemovalStrategy: destroy
+
+

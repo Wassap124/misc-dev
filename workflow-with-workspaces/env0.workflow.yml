@@ -18,10 +18,3 @@ environments:
 
 settings:
   environmentRemovalStrategy: destroy
-
-
-# cc4411e9-9ff2-4c4d-8aca-e986dc7ed236
-# destroy - b0cff90b-1a10-4fcb-9d50-5d351af311af, started 12:16:00 PM
-
-# f035348f-9b5c-4dc9-8175-ed44c75265e2
-# deploy - f2d6f509-c2ff-4bf4-95b7-e96e36d327f9 - started 12:52:00 PM
