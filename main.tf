@@ -12,7 +12,7 @@ provider "aws" {
 
 
 resource "null_resource" "example" {
-  count = 2
+  count = 3
 }
 
 output "null_resource_id" {
