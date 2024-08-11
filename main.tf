@@ -18,6 +18,6 @@ output "null_resource_id" {
   value = null_resource.example.id
 }
 
-output "null_resource_id" {
+output "output_for_pismo" {
   value = vars.sub_tf_variable
 }
