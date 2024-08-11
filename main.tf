@@ -25,5 +25,5 @@ variable "sub_tf_variable" {
 
 
 output "output_for_pismo" {
-  value = vars.sub_tf_variable
+  value = var.sub_tf_variable
 }
