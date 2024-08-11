@@ -16,7 +16,7 @@ resource "null_resource" "example" {
 }
 
 output "null_resource_id" {
-  value = null_resource.example.id[0]
+  value = null_resource.example[0].id
 }
 
 variable "sub_tf_variable" {
