@@ -18,6 +18,12 @@ output "null_resource_id" {
   value = null_resource.example.id
 }
 
+variable "sub_tf_variable" {
+  type        = string   # The data type (string, number, bool, list, map, etc.)
+  default     = "default_value"  # Optional, provides a default value
+}
+
+
 output "output_for_pismo" {
   value = vars.sub_tf_variable
 }
