@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 
-resource "g" "example" {
+resource "null_resource" "example" {
   count = 3
 }
 
