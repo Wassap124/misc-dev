@@ -7,7 +7,6 @@
       apt:
         name: python3-apt
         state: present
-      become: yes
       check_mode: no
     - name: Install Nginx
       apt:
