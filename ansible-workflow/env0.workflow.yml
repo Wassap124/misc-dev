@@ -1,0 +1,11 @@
+environments:
+  tf-null1:
+    name: "null resource vcs"
+    templateName: "null resources"
+    workspace: "null-resources-workspace-1"
+  tf-null2:
+    name: "ansible-debug"
+    templateName: "ansible-my_extra_var"
+    needs:
+      - tf-null1
+
