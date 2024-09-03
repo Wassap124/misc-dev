@@ -3,8 +3,11 @@
     - name: Print the variable
       debug:
         msg: "{{ my_extra_var }}"
-      tags:
-        - should-run
-    - name: Print the variable
-      debug:
-        msg: "{{ my_extra_var }}"
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
