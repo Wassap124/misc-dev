@@ -3,6 +3,11 @@
     - name: Print the variable
       debug:
         msg: "{{ my_extra_var }}"
+    - name: Ensure python3-apt is installed
+      apt:
+        name: python3-apt
+        state: present
+      when: ansible_check_mode
     - name: Install Nginx
       apt:
         name: nginx
