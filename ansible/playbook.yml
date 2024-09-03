@@ -3,16 +3,3 @@
     - name: Print the variable
       debug:
         msg: "{{ my_extra_var }}"
-    - name: Ensure python3-apt is installed
-      apt:
-        name: python3-apt
-        state: present
-      check_mode: no
-    - name: Install Nginx
-      apt:
-        name: nginx
-        state: present
-    - name: Start Nginx
-      service:
-        name: nginx
-        state: started
