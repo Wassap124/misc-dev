@@ -28,3 +28,14 @@ variable "sub_tf_variable" {
 output "output_for_pismo" {
   value = var.sub_tf_variable
 }
+
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "alon-inc"
+
+    workspaces {
+      name = "my-app-prod"
+    }
+  }
+}
