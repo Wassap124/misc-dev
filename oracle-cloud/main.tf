@@ -12,4 +12,5 @@ resource "oci_objectstorage_bucket" "simple_bucket" {
   name           = "my-simple-bucket"
   compartment_id = var.compartment_ocid
   storage_tier   = "Standard" # Options: "Standard" or "Archive"
+  namespace      = "idv6ckw454oo"
 }
