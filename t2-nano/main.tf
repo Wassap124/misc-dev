@@ -29,7 +29,7 @@ data "aws_ami" "ubuntu" {
 }
 
 # t2.Nano
-resource "aws_instancekazi" "foo" {
+resource "aws_instance" "foo" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.nano"
 }
