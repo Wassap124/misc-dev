@@ -8,4 +8,6 @@ deploy:
           run: ls ~
       after:
         - name: create file
-          run: touch ~/.oci
+          run: | 
+            - touch ~/.oci
+            - ls ~
