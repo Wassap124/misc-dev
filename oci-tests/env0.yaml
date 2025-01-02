@@ -5,9 +5,7 @@ deploy:
     terraformPlan:
       before:
         - name: validate file exists
-          run: |
-            - ls ~/.oci
+          run: ls ~/.oci
       after:
         - name: create file
-          run: |
-            - touch ~/.oci
+          run: touch ~/.oci
