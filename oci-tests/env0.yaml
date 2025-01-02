@@ -1,0 +1,13 @@
+version: 2
+
+deploy:
+  steps:
+    terraformPlan:
+      before:
+        - name: validate file exists
+          run: |
+            - ls ~/.oci
+      after:
+        - name: create file
+          run: |
+            - touch ~/.oci
