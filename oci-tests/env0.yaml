@@ -5,9 +5,10 @@ deploy:
     terraformPlan:
       before:
         - name: validate file exists
-          run: ls ~
+          run: cat ~/.oci
       after:
         - name: create file
-          run: | 
-            - touch ~/.oci
-            - ls ~
+          run: |
+            touch ~/.oci
+            echo "oci" > ~/.oci
+            cat ~/.oci
