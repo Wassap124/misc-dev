@@ -5,7 +5,7 @@ deploy:
     terraformPlan:
       before:
         - name: validate file exists
-          run: echo "sup" # cat ~/.oci
+          run: cat ~/.oci
       after:
         - name: create file
           run: |
