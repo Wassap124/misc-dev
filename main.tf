@@ -28,3 +28,9 @@ variable "sub_tf_variable" {
 output "output_for_pismo" {
   value = var.sub_tf_variable
 }
+
+resource "null_resource" "cluster" {
+}
+
+resource "null_resource" "cluster2" {
+}
