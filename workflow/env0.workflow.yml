@@ -9,6 +9,12 @@ environments:
     workspace: "i-am-null"
     needs:
       - tf-null1
+  tf-null3:
+    name: "null resource vcs 3"
+    templateName: "null resources"
+    workspace: "i-am-null-too"
+    needs:
+      - tf-null1
 
 settings:
   environmentRemovalStrategy: destroy
